@@ -1,0 +1,182 @@
+{
+    "DetailTable": [
+      {
+        "Car_ID": 1,
+        "kmsDriven": 12000,
+        "ownership": "First Owner",
+        "condition": "Excellent",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2022,
+        "insuranceStatus": "Valid till Dec 2025",
+        "location": "Delhi",
+        "features": ["ABS", "Airbags", "Touchscreen", "Reverse Camera"]
+      },
+      {
+        "Car_ID": 2,
+        "kmsDriven": 18000,
+        "ownership": "Second Owner",
+        "condition": "Good",
+        "serviceHistory": "Partial Service History",
+        "registrationYear": 2021,
+        "insuranceStatus": "Valid till Oct 2024",
+        "location": "Mumbai",
+        "features": ["Power Steering", "Bluetooth", "Cruise Control"]
+      },
+      {
+        "Car_ID": 3,
+        "kmsDriven": 5000,
+        "ownership": "First Owner",
+        "condition": "Like New",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2023,
+        "insuranceStatus": "Valid till Jan 2026",
+        "location": "Bangalore",
+        "features": ["Leather Seats", "Sunroof", "Navigation System"]
+      },
+      {
+        "Car_ID": 4,
+        "kmsDriven": 9000,
+        "ownership": "First Owner",
+        "condition": "Very Good",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2022,
+        "insuranceStatus": "Valid till Aug 2025",
+        "location": "Pune",
+        "features": ["Fog Lights", "Alloy Wheels", "Push Start"]
+      },
+      {
+        "Car_ID": 5,
+        "kmsDriven": 23000,
+        "ownership": "Second Owner",
+        "condition": "Fair",
+        "serviceHistory": "No History Available",
+        "registrationYear": 2020,
+        "insuranceStatus": "Expired",
+        "location": "Chennai",
+        "features": ["M KIT", "Carbon fiber Hood", "JBL Music"]
+      },
+      {
+        "Car_ID": 6,
+        "kmsDriven": 26000,
+        "ownership": "Second Owner",
+        "condition": "Fair",
+        "serviceHistory": "No History Available",
+        "registrationYear": 2023,
+        "insuranceStatus": "Expired",
+        "location": "Delhi",
+        "features": ["RS KIT", "Heated Seats", "Voice Assist"]
+      },
+      {
+        "Car_ID": 7,
+        "kmsDriven": 30000,
+        "ownership": "Second Owner",
+        "condition": "Fair",
+        "serviceHistory": "No History Available",
+        "registrationYear": 2021,
+        "insuranceStatus": "Expired",
+        "location": "Uttar Pradesh",
+        "features": ["Boss Mode", "Heated Seats", "Sunroof"]
+      },
+      {
+        "Car_ID": 8,
+        "kmsDriven": 42000,
+        "ownership": "First Owner",
+        "condition": "Mint",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2019,
+        "insuranceStatus": "Valid till Jan 2020",
+        "location": "Haryana",
+        "features": ["Reverse Cmera", "SATGE1 TUNED", "GTI KIT"]
+      },
+      {
+        "Car_ID": 9,
+        "kmsDriven": 28000,
+        "ownership": "First Owner",
+        "condition": "Mint",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2022,
+        "insuranceStatus": "Valid till Aug 2023",
+        "location": "Delhi",
+        "features": ["Sunroof", "Ventilated Seats", "AWD"]
+      },
+      {
+        "Car_ID": 10,
+        "kmsDriven": 38000,
+        "ownership": "Fisrt Owner",
+        "condition": "Mint",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2021,
+        "insuranceStatus": "Valid till Oct 2022",
+        "location": "Pune",
+        "features": ["Reverse Sensor", "Heated Seats", "Voice Assist"]
+      },
+      {
+        "Car_ID": 11,
+        "kmsDriven": 23000,
+        "ownership": "First Owner",
+        "condition": "Very Good",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2021,
+        "insuranceStatus": "Valid till Jan 2022",
+        "location": "Punjab",
+        "features": ["Head-up Display", "Heated Seats", "RS Kit"]
+      },
+      {
+        "Car_ID": 12,
+        "kmsDriven": 40000,
+        "ownership": "First Owner",
+        "condition": "Fair",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2019,
+        "insuranceStatus": "Valid till Jan 2020",
+        "location": "Delhi",
+        "features": ["Reverse Camera", "Harman Music", "5 Star Safety"]
+      },
+      {
+        "Car_ID": 13,
+        "kmsDriven": 4500,
+        "ownership": "First Owner",
+        "condition": "Very Good",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2022,
+        "insuranceStatus": "Valid till Jan 2023",
+        "location": "Delhi",
+        "features": ["Reverse Sensor", "Heated Seats", "Voice Assist","Luxury Features"]
+      },
+      {
+        "Car_ID": 14,
+        "kmsDriven": 23000,
+        "ownership": "First Owner",
+        "condition": "Very Good",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2020,
+        "insuranceStatus": "Valid till Jan 2023",
+        "location": "Punjab",
+        "features": ["8 way adjustabe seats", "Rear 18inch Screen", "Luxury Features"]
+      },
+      {
+        "Car_ID": 15,
+        "kmsDriven": 23000,
+        "ownership": "Second Owner",
+        "condition": "Good",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2021,
+        "insuranceStatus": "Valid till Jan 2022",
+        "location": "Haryana",
+        "features": ["Sunroof", "Heated Seats", "Voice Assist"]
+      },
+      {
+        "Car_ID": 15,
+        "kmsDriven": 250,
+        "ownership": "First Owner",
+        "condition": "Excellent",
+        "serviceHistory": "Full Service History",
+        "registrationYear": 2025,
+        "insuranceStatus": "Valid till Jan 2026",
+        "location": "Delhi",
+        "features": ["Brabus-Kit", "Leather Seats", "SATGE1 TUNED"]
+      }
+      
+    ]
+  }
+  

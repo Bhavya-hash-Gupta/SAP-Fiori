@@ -1,0 +1,182 @@
+{
+    "Car Table": [
+      {
+        "Car_ID": 1,
+        "brand": "Toyota",
+        "model": "Camry",
+        "year": 2022,
+        "price": 4200000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "White",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 2,
+        "brand": "Honda",
+        "model": "Civic",
+        "year": 2021,
+        "price": 900000,
+        "fuelType": "Diesel",
+        "transmission": "Manual",
+        "color": "Black",
+        "availability": "Sold"
+      },
+      {
+        "Car_ID": 3,
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 2023,
+        "price": 6500000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "Red",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 4,
+        "brand": "Hyundai",
+        "model": "Elantra",
+        "year": 2022,
+        "price": 1000000,
+        "fuelType": "Petrol",
+        "transmission": "Manual",
+        "color": "Blue",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 5,
+        "brand": "BMW",
+        "model": "X5",
+        "year": 2020,
+        "price": 8700000,
+        "fuelType": "Diesel",
+        "transmission": "Automatic",
+        "color": "Grey",
+        "availability": "Sold"
+      },
+      {
+        "Car_ID": 6,
+        "brand": "Audi",
+        "model": "A4",
+        "year": 2023,
+        "price": 5600000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "White",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 7,
+        "brand": "Mercedes",
+        "model": "C-Class",
+        "year": 2021,
+        "price": 4600000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "Silver",
+        "availability": "Sold"
+      },
+      {
+        "Car_ID": 8,
+        "brand": "Volkswagen",
+        "model": "Polo",
+        "year": 2019,
+        "price": 900000,
+        "fuelType": "Diesel",
+        "transmission": "Manual",
+        "color": "Black",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 9,
+        "brand": "Tata",
+        "model": "Harrier",
+        "year": 2022,
+        "price": 1450000,
+        "fuelType": "Diesel",
+        "transmission": "Manual",
+        "color": "Orange",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 10,
+        "brand": "Kia",
+        "model": "Seltos",
+        "year": 2021,
+        "price": 1250000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "White",
+        "availability": "Sold"
+      },
+      {
+        "Car_ID": 11,
+        "brand": "Audi",
+        "model": "Q3",
+        "year": 2021,
+        "price": 3550000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "Grey",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 12,
+        "brand": "Tata",
+        "model": "Nexon",
+        "year": 2019,
+        "price": 6500000,
+        "fuelType": "Petrol",
+        "transmission": "Manual",
+        "color": "Red",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 13,
+        "brand": "Aston Martin",
+        "model": "DBX",
+        "year": 2022,
+        "price": 150000000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "RoseGold",
+        "availability": "Available"
+      },
+      {
+        "Car_ID": 14,
+        "brand": "BMW",
+        "model": "7 Series",
+        "year": 2020,
+        "price": 9600000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "Black",
+        "availability": "Sold"
+      },
+      {
+        "Car_ID": 15,
+        "brand": "MG",
+        "model": "Hector",
+        "year": 2021,
+        "price": 1350000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "White",
+        "availability": "Sold"
+      },
+      {
+        "Car_ID": 16,
+        "brand": "Mercedes",
+        "model": "G-Wagon",
+        "year": 2025,
+        "price": 20000000,
+        "fuelType": "Petrol",
+        "transmission": "Automatic",
+        "color": "Black",
+        "availability": "Available"
+      }
+      
+    ]
+  }
+  

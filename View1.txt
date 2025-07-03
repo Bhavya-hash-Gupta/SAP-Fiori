@@ -1,0 +1,71 @@
+<mvc:View controllerName="sap.gt.cardealer.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="CHERRY AUTOMOBILES" titleAlignment="Center">
+    <content>
+    <!-- CAR TABLE -->
+    <Table id="carinfo" items="{CarsModel>/Car Table}">
+    <headerToolbar>
+    <Toolbar>
+    <Title text="CARS LIST" level="H2"></Title>
+    <ToolbarSpacer />
+    <Button id="filter" icon="sap-icon://filter" press="onFilterPress" type="Emphasized"/>
+    <Button id="export" icon="sap-icon://excel-attachment" press="onExport" type="Emphasized"/>
+    </Toolbar>
+    </headerToolbar>
+    <columns>
+    <Column>
+    <Text text="ID"/>
+    </Column>
+    <Column>
+    <Text text="Brand"/>
+    </Column>
+    <Column>
+    <Text text="Model"/>
+    </Column>
+    <Column>
+    <Text text="Year"/>
+    </Column>
+    <Column>
+    <Text text="Price"/>
+    </Column>
+    <Column>
+    <Text text="Fuel Type"/>
+    </Column>
+    <Column>
+    <Text text="Transmission"/>
+    </Column>
+    <Column>
+    <Text text="Color"/>
+    </Column>
+    <Column>
+    <Text text="Availability"/>
+    </Column>
+    </columns>
+    <items>
+    <ColumnListItem id="carlist" type="Navigation" press="onClick">
+    <cells>
+    <Text text="{CarsModel>Car_ID}"/>
+    <Text text="{CarsModel>brand}"/>
+    <Text text="{CarsModel>model}"/>
+    <Text text="{CarsModel>year}"/>
+    <Text text="{CarsModel>price}"/>
+    <ObjectStatus 
+        text="{CarsModel>fuelType}"
+        state="{path: 'CarsModel>fuelType', formatter: '.formatFuelType'}"
+        class="fuelBold"
+        inverted="true"/>
+    <Text text="{CarsModel>transmission}"/>
+    <Text text="{CarsModel>color}"/>
+    <ObjectStatus 
+        text="{CarsModel>availability}"
+        state="{path: 'CarsModel>availability', formatter: '.formatAvailability'}"
+        class="availabilityBold"
+        inverted="true"/>
+    </cells>
+    </ColumnListItem>
+    </items>
+    </Table>
+    </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,118 @@
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/Fragment",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/export/Spreadsheet",
+    "sap/ui/export/library"
+   
+
+], function(Controller,Fragment, Filter,FilterOperator,JSONModel,Spreadsheet,exportLibrary) {
+    "use strict";
+    
+
+    return Controller.extend("sap.gt.cardealer.controller.View1", {
+        onInit:function() {
+        },
+        formatFuelType: function(sFuelType) {
+            if (sFuelType === "Petrol") {
+                return "Success";
+            }   else if (sFuelType === "Diesel") {
+                return "Error";
+            } else {
+                return "None";
+            }
+        },
+        formatAvailability: function(sAvailability) {
+            if (sAvailability === "Available") {
+                return "Success";
+            }   else if (sAvailability === "Sold") {
+                return "Error";
+            } else {
+                return "None";
+            }
+        },
+        
+        //Routing Function
+        onClick: function (oEvent) {
+            var oSelectedItem = oEvent.getSource();
+            var oContext = oSelectedItem.getBindingContext("CarsModel");
+            var oCarData = oContext.getObject();
+            var sCarId = oCarData.Car_ID;
+
+            // Store selected car data in global model
+            var oSelectedModel = new JSONModel(oCarData);
+            sap.ui.getCore().setModel(oSelectedModel, "SelectedCar");
+
+            // Navigate to View2 with carId as route parameter
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteView2", { carId: sCarId });
+        }, 
+
+        //Filter Function
+        onFilterPress: function(){
+            var oView = this.getView();
+            if(!this._oFilterDialog){
+                Fragment.load({
+                    name: "sap.gt.cardealer.fragment.filter",
+                    controller :this
+                }).then(function (oDialog){
+                    this._oFilterDialog = oDialog;
+                    oView.addDependent(oDialog);
+                    oDialog.open();
+                }.bind(this));
+            }   else {
+                this._oFilterDialog.open();
+            }
+        },
+        handleConfirm: function (oEvent){
+            var aSelectedFilters = oEvent.getParameters().filterItems;
+            var aFilters = [];
+
+            aSelectedFilters.forEach(function(oItem){
+                var sPath = oItem.getParent().getKey();
+                var sValue = oItem.getKey();
+                aFilters.push(new Filter(sPath, FilterOperator.EQ, sValue));
+            });
+            var oTable = this.getView().byId("carinfo");
+            oTable.getBinding("items").filter(aFilters);
+        },
+       
+        onExport: function () {
+            var aCols = this._createColumnConfig(); 
+            var oTable = this.getView().byId("carinfo");
+            var aItems = oTable.getItems();
+            var aData=[];
+            aItems.forEach(function (oItem){
+                aData.push(oItem.getBindingContext("CarsModel").getObject());
+            });
+        
+            var oSettings = {
+                workbook: { columns: aCols },
+                dataSource: aData,
+                fileName: "Car_List.xlsx",
+                worker: false
+            };
+        
+            var oSpreadsheet = new sap.ui.export.Spreadsheet(oSettings);
+            oSpreadsheet.build().finally(function () {
+                oSpreadsheet.destroy();
+            });
+        },
+        _createColumnConfig: function () {
+            return [
+                { label: "ID", property: "Car_ID", type: exportLibrary.EdmType.String},
+                { label: "Brand", property: "brand", type: exportLibrary.EdmType.String },
+                { label: "Model", property: "model", type: exportLibrary.EdmType.String },
+                { label: "Year", property: "year", type: exportLibrary.EdmType.Number },
+                { label: "Price", property: "price", type: exportLibrary.EdmType.Number},
+                { label: "Fuel Type", property: "fuelType", type: exportLibrary.EdmType.String },
+                { label: "Transmission", property: "transmission", type: exportLibrary.EdmType.String},
+                { label: "Color", property: "color", type: exportLibrary.EdmType.String},
+                { label: "Availability", property: "availability", type: exportLibrary.EdmType.String }
+            ];
+        }
+                
+    });
+});

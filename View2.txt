@@ -1,0 +1,123 @@
+<mvc:View controllerName="sap.gt.cardealer.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2">
+    <content>
+    <ScrollContainer height="100%" vertical="true">
+    <VBox class="sapUiSmallMargin" fitContainer="true" renderType="Div">
+    <Toolbar>
+    <Title text="Car List"  level="H2"></Title>
+    </Toolbar>
+    <!-- CAR_Table -->
+    <Table id="cargroup" inset="false" items="{CarGroup>/data}" growing="true">
+    <columns>
+    <Column >
+    <Text text="ID"/>
+    </Column>
+    <Column>
+    <Text text="Brand"/>
+    </Column>
+    <Column>
+    <Text text="Model"/>
+    </Column>
+    <Column>
+    <Text text="Year"/>
+    </Column>
+    <Column>
+    <Text text="Price"/>
+    </Column>
+    <Column>
+    <Text text="Fuel Type"/>
+    </Column>
+    <Column>
+    <Text text="Transmission"/>
+    </Column>
+    <Column>
+    <Text text="Color"/>
+    </Column>
+    <Column>
+    <Text text="Availability"/>
+    </Column>
+    </columns>
+    <items>
+    <ColumnListItem >
+    <cells>
+    <Text text="{CarGroup>Car_ID}"></Text>
+    <Text text="{CarGroup>brand}"></Text>
+    <Text text="{CarGroup>model}"></Text>
+    <Text text="{CarGroup>year}"></Text>
+    <Text text="{CarGroup>price}"></Text>
+    <ObjectStatus 
+        text="{CarGroup>fuelType}"
+        state="{path: 'CarGroup>fuelType', formatter: '.formatFuelType'}"
+        class="fuelBold"
+        inverted="true"/>
+    
+    <Text text="{CarGroup>transmission}"></Text>
+    <Text text="{CarGroup>color}"></Text>
+     <ObjectStatus 
+        text="{CarGroup>availability}"
+        state="{path: 'CarGroup>availability', formatter: '.formatAvailability'}"
+        class="availabilityBold"
+        inverted="true"/>
+    </cells>
+    </ColumnListItem>
+    </items>
+    </Table >
+    </VBox>
+    <!-- Car Detail Table -->
+    <Toolbar >
+    <Title text="Car Details" level="H2"/>
+    <ToolbarSpacer />
+    
+    </Toolbar>
+    <Table id="details" items="{DetailGroup>/data}">
+    <columns>
+    <Column>
+    <Text text="Car_ID"/>
+    </Column>
+    <Column>
+    <Text text="KmsDriven"/>
+    </Column>
+    <Column>
+    <Text text="Ownership"/>
+    </Column>
+    <Column>
+    <Text text="Condition"/>
+    </Column>
+    <Column>
+    <Text text="ServiceHistory"/>
+    </Column>
+    <Column>
+    <Text text="RegistrationYear"/>
+    </Column>
+    <Column>
+    <Text text="InsuranceStatus"/>
+    </Column>
+    <Column>
+    <Text text="Location"/>
+    </Column>
+    <!-- <Column>
+    <Text text="Features"/>
+    </Column> -->
+    </columns>
+    <items>
+    <ColumnListItem>
+    <cells>
+    <Text text="{DetailGroup>Car_ID}"/>
+    <Text text="{DetailGroup>kmsDriven}"/>
+    <Text text="{DetailGroup>ownership}"/>
+    <Text text="{DetailGroup>condition}"/>
+    <Text text="{DetailGroup>serviceHistory}"/>
+    <Text text="{DetailGroup>registrationYear}"/>
+    <Text text="{DetailGroup>insuranceStatus}"/>
+    <Text text="{DetailGroup>location}"/>
+    <!-- <Text text="{DetailGroup>Features}"/> -->
+    </cells>
+    </ColumnListItem>
+    </items>
+    </Table>
+    </ScrollContainer>
+    </content>
+    </Page>
+</mvc:View>

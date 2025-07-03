@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:core="sap.ui.core">
+<ViewSettingsDialog confirm="handleConfirm">
+<filterItems>
+<ViewSettingsFilterItem text="Brand" key="brand">
+<items>
+<ViewSettingsItem text="Toyota" key="Toyota"/>
+<ViewSettingsItem text="Hyundai" key="Hyundai"/>
+<ViewSettingsItem text="BMW" key="BMW"/>
+</items>
+</ViewSettingsFilterItem>
+<ViewSettingsFilterItem text="Year" key="year">
+<items>
+<ViewSettingsItem text="2019" key="2019"/>
+<ViewSettingsItem text="2020" key="2020"/>
+<ViewSettingsItem text="2021" key="2021"/>
+<ViewSettingsItem text="2023" key="2022"/>
+<ViewSettingsItem text="2024" key="2024"/>
+<ViewSettingsItem text="2025" key="2025"/>
+</items>
+</ViewSettingsFilterItem>
+</filterItems>
+</ViewSettingsDialog>
+</core:FragmentDefinition>

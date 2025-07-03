@@ -1,0 +1,59 @@
+sap.ui.define([
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel"
+], function (Controller, JSONModel) {
+    "use strict";
+
+    return Controller.extend("sap.gt.cardealer.controller.View2", {
+
+        onInit: function () {
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.getRoute("RouteView2").attachPatternMatched(this._onRouteMatched, this);
+        },
+        formatFuelType: function(sFuelType) {
+            if (sFuelType === "Petrol") {
+                return "Success";
+            }   else if (sFuelType === "Diesel") {
+                return "Error";
+            } else {
+                return "None";
+            }
+        },
+        formatAvailability: function(sAvailability) {
+            if (sAvailability === "Available") {
+                return "Success";
+            }   else if (sAvailability === "Sold") {
+                return "Error";
+            } else {
+                return "None";
+            }
+        },
+
+        _onRouteMatched: function (oEvent) {
+            var sCarId = oEvent.getParameter("arguments").carId;
+            
+            var oSelectedCar = sap.ui.getCore().getModel("SelectedCar").getData();
+            var oSingleCarModel = new JSONModel({ data: [oSelectedCar] });
+            this.getView().setModel(oSingleCarModel, "CarGroup");
+            
+            var oDetailModel = new JSONModel();
+            var that = this;
+            oDetailModel.loadData("model/cardetails.json", null, true);
+            
+            oDetailModel.attachRequestCompleted(function () {
+            var aAllDetails = oDetailModel.getProperty("/DetailTable");
+            console.log("Loaded Details:", aAllDetails);
+            
+            // Filter based on Car_ID
+            var aFilteredDetails = aAllDetails.filter(function (item) {
+            return item.Car_ID == sCarId;
+            });
+            
+            // Set filtered data to DetailGroup model
+            var oFilteredModel = new JSONModel({ data: aFilteredDetails });
+            that.getView().setModel(oFilteredModel, "DetailGroup");
+            });
+            }
+        });
+            
+});
